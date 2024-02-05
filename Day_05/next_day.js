@@ -1,6 +1,8 @@
-let dd = 0;
-let mm = 0;
-let yy = 0;
+let dd = 1;
+let mm = 11;
+let yy = -2024;
+
+if(yy > 0) {
 
 switch (mm) {
   case 1:
@@ -68,7 +70,7 @@ function nextDateThree(dd, mm, yy) {
   let y = yy;
 
   if (y % 4 == 0) {
-    if (y % 400 == 0) {
+    if (y % 400 != 0 || y % 100 == 0) {
       if (d >= 1 && d <= 29) {
         d = d + 1;
         if (d > 29) {
@@ -92,5 +94,8 @@ function nextDateThree(dd, mm, yy) {
       console.log("Wrong number of date input has been given!");
     }
   }
+}
+} else {
+  console.log("Wrong year has been entered!");
 }
 // console.log(`Next date is : ${dd}-${mm}-${yy}`);
